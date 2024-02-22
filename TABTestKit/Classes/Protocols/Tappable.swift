@@ -22,36 +22,36 @@ public extension Element where Self: Tappable {
 
 	func tap() {
     #if swift(>=5.5)
-		  waitFor(.exists)
+		  waitFor(.hittable)
     #else
-      await(.exists)
+      await(.hittable)
     #endif
 		underlyingXCUIElement.tap()
 	}
 
 	func doubleTap() {
     #if swift(>=5.5)
-      waitFor(.exists)
+      waitFor(.hittable)
     #else
-      await(.exists)
+      await(.hittable)
     #endif
 		underlyingXCUIElement.doubleTap()
 	}
 
 	func twoFingerTap() {
     #if swift(>=5.5)
-      waitFor(.exists)
+      waitFor(.hittable)
     #else
-      await(.exists)
+      await(.hittable)
     #endif
 		underlyingXCUIElement.twoFingerTap()
 	}
 
 	func longPress(duration: TimeInterval) {
     #if swift(>=5.5)
-      waitFor(.exists)
+      waitFor(.hittable)
     #else
-      await(.exists)
+      await(.hittable)
     #endif
 		underlyingXCUIElement.press(forDuration: duration)
 	}
